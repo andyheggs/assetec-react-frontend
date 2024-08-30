@@ -25,17 +25,17 @@ const ManageHolding = () => {
         const controller = new AbortController();
         const fetchHoldingData = async () => {
             try {
-                const response = await fetch(`http://127.0.0.1:8000/stocks/${id}/`, {
+                const response = await fetch(`${import.meta.env.VITE_BACK_END_SERVER_URL}/stocks/${id}/`, {
                     signal: controller.signal,
                     headers: {
-                        'Authorization': `Bearer ${authTokens.access}`, // Include Authorization header
+                        'Authorization': `Bearer ${authTokens.access}`, 
                     },
                 });
                 if (response.ok) {
                     const data = await response.json();
                     setFormData({
                         ...data,
-                        quantity: data.quantity || '', // Ensure no null values
+                        quantity: data.quantity || '', 
                         share_price: data.share_price || '',
                         new_share_price: data.new_share_price || '',
                         brokerage_fees: data.brokerage_fees || '',
@@ -54,7 +54,7 @@ const ManageHolding = () => {
         fetchHoldingData();
 
         return () => {
-            controller.abort(); // Clean up the fetch request if the component unmounts
+            controller.abort(); 
         };
     }, [id, authTokens]);
 
@@ -91,7 +91,7 @@ const ManageHolding = () => {
         };
     
         try {
-            const response = await fetch(`http://127.0.0.1:8000/stocks/${id}/`, {
+            const response = await fetch(`${import.meta.env.VITE_BACK_END_SERVER_URL}/stocks/${id}/`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
@@ -117,10 +117,10 @@ const ManageHolding = () => {
     const handleDelete = async () => {
         if (window.confirm('Are you sure you want to delete this holding?')) {
             try {
-                const response = await fetch(`http://127.0.0.1:8000/stocks/${id}/`, {
+                const response = await fetch(`${import.meta.env.VITE_BACK_END_SERVER_URL}/stocks/${id}/`, {
                     method: 'DELETE',
                     headers: {
-                        'Authorization': `Bearer ${authTokens.access}`, // Include Authorization header
+                        'Authorization': `Bearer ${authTokens.access}`, 
                     },
                 });
 

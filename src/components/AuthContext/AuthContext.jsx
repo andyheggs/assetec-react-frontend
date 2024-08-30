@@ -1,9 +1,9 @@
 import React, { createContext, useState, useEffect } from 'react'; 
 
-// Create a context for authentication
+
 export const AuthContext = createContext();
 
-// Provider component to wrap app with authentication context
+
 export const AuthProvider = ({ children }) => {
   const [authTokens, setAuthTokens] = useState(() => 
     localStorage.getItem('authTokens') ? JSON.parse(localStorage.getItem('authTokens')) : null
@@ -18,13 +18,13 @@ export const AuthProvider = ({ children }) => {
       const decodedToken = JSON.parse(atob(authTokens.access.split('.')[1]));
       setUser({
         ...decodedToken,
-        profile_image: decodedToken.profile_image || '/path/to/default/profile/image.png', // Fallback to a default image
+        profile_image: decodedToken.profile_image || '/path/to/default/profile/image.png', 
       });
     }
   }, [authTokens]);
 
   const login = async (username, password) => {
-    const response = await fetch('/auth/sign-in/', {
+    const response = await fetch(`${import.meta.env.VITE_BACK_END_SERVER_URL}/auth/sign-in/`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -46,7 +46,7 @@ export const AuthProvider = ({ children }) => {
   };
   
   const signUp = async (userData) => {
-    const response = await fetch('/auth/sign-up/', {
+    const response = await fetch(`${import.meta.env.VITE_BACK_END_SERVER_URL}/auth/sign-up/`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

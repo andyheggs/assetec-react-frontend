@@ -1,8 +1,8 @@
 import React from 'react';
 import './ImageUpload.css';
 
-const uploadUrl = import.meta.env.VITE_CLOUDINARY_URL;  // Cloudinary URL or your server endpoint
-const uploadPreset = import.meta.env.VITE_CLOUDINARY_UPLOAD_PRESET;  // Cloudinary upload preset
+const uploadUrl = import.meta.env.VITE_CLOUDINARY_URL; 
+const uploadPreset = import.meta.env.VITE_CLOUDINARY_UPLOAD_PRESET;  
 
 const ImageUpload = ({ name, label, profileImage, handleImageUpload, setMessage }) => {
 
@@ -24,7 +24,7 @@ const ImageUpload = ({ name, label, profileImage, handleImageUpload, setMessage 
       });
 
       const imageData = await res.json();
-      handleImageUpload(imageData.secure_url);  // Update the profile image URL
+      handleImageUpload(imageData.secure_url);  
       setMessage('');
     } catch (error) {
       console.error('Image upload failed:', error);

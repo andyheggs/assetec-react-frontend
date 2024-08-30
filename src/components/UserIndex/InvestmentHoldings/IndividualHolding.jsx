@@ -10,7 +10,7 @@ const IndividualHolding = ({ holdingId }) => {
         if (holdingId) {
             const fetchHoldingData = async () => {
                 try {
-                    const response = await fetch(`http://127.0.0.1:8000/stocks/${holdingId}/`, {
+                    const response = await fetch(`${import.meta.env.VITE_BACK_END_SERVER_URL}/${holdingId}/`, {
                         method: 'GET',
                         headers: {
                             'Content-Type': 'application/json',

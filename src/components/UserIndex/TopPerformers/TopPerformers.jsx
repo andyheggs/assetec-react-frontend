@@ -1,9 +1,13 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { AuthContext } from '../../AuthContext/AuthContext';
+import { useNavigate } from 'react-router-dom';
+
 
 const TopPerformers = () => {
     const [topPerformers, setTopPerformers] = useState([]);
     const { authTokens } = useContext(AuthContext);
+
+    const navigate = useNavigate();
 
     useEffect(() => {
         const fetchTopPerformers = async () => {

@@ -7,11 +7,11 @@ const LandingPage = () => {
     const navigate = useNavigate(); 
 
     const handleSignUp = () => {
-        navigate('/sign-up'); // Navigate to the sign-up page
+        navigate('/sign-up'); 
     };
 
     const handleSignIn = () => {
-        navigate('/sign-in'); // Navigate to the sign-in page
+        navigate('/sign-in'); 
     };
 
     return (

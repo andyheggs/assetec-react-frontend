@@ -1,10 +1,10 @@
 import React, { useState, useContext } from 'react';
-import { AuthContext } from '../AuthContext/AuthContext'; // Ensure AuthContext is imported
+import { AuthContext } from '../AuthContext/AuthContext'; 
 import { useNavigate } from 'react-router-dom';
 import './CreateHolding.css';
 
 const CreateHolding = () => {
-    const { authTokens, user, logout } = useContext(AuthContext); // Access authTokens and user from context
+    const { authTokens, user, logout } = useContext(AuthContext); 
     const [formData, setFormData] = useState({
         company_code: '',
         company_name: '',
@@ -38,18 +38,18 @@ const CreateHolding = () => {
         const totalInvestment = calculateTotalInvestment();
 
         try {
-            const response = await fetch('http://127.0.0.1:8000/stocks/', {
+            const response = await fetch(`${import.meta.env.VITE_BACK_END_SERVER_URL}/stocks/`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
-                    'Authorization': `Bearer ${authTokens.access}`, // Include Authorization header
+                    'Authorization': `Bearer ${authTokens.access}`, 
                 },
                 body: JSON.stringify({ ...formData, total_investment: totalInvestment })
             });
 
             if (response.ok) {
                 alert('Holding added successfully!');
-                navigate('/index'); // Redirect to index page after success
+                navigate('/index'); 
             } else {
                 const errorData = await response.json();
                 console.error('Failed to add holding:', errorData);
@@ -62,8 +62,8 @@ const CreateHolding = () => {
     };
 
     const handleSignOut = () => {
-        logout(); // Handle logout action
-        navigate('/sign-in'); // Redirect to sign-in page after logout
+        logout(); 
+        navigate('/sign-in'); 
     };
 
     return (
