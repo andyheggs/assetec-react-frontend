@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 
 const InvestmentHoldings = () => {
     const [holdings, setHoldings] = useState([]);
-    const [selectedHoldingId, setSelectedHoldingId] = useState(null); 
+    const [selectedHoldingId, setSelectedHoldingId] = useState(null);
     const { authTokens } = useContext(AuthContext);
     const navigate = useNavigate();
 
@@ -82,7 +82,7 @@ const InvestmentHoldings = () => {
     };
 
     const handleHoldingClick = (holdingId) => {
-        setSelectedHoldingId(holdingId); 
+        setSelectedHoldingId(holdingId);
     };
 
     return (
@@ -119,7 +119,8 @@ const InvestmentHoldings = () => {
                                 {calculateTotalGain(holding)}
                             </td>
                             <td>
-                                <button onClick={() => navigate(`${import.meta.env.VITE_BACK_END_SERVER_URL}/stocks/${holding.id}`)}>
+                                {/* Navigate to Manage Holding Page */}
+                                <button onClick={() => navigate(`/manage-holding/${holding.id}`)}>
                                     Edit
                                 </button>
                                 <button onClick={() => handleDelete(holding.id)}>
