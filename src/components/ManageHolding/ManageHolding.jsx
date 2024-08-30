@@ -74,6 +74,8 @@ const ManageHolding = () => {
         const qty = parseFloat(quantity) || 0;
         const price = parseFloat(share_price) || 0;
         const fees = parseFloat(brokerage_fees) || 0;
+    
+        // Return the total investment amount
         return qty * price + fees;
     };
 
