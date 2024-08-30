@@ -1,7 +1,5 @@
 import React, { useEffect, useState, useContext } from 'react';
 import { AuthContext } from '../../AuthContext/AuthContext';
-import { useNavigate } from 'react-router-dom';
-
 
 
 const PortfolioOverview = () => {
@@ -12,7 +10,7 @@ const PortfolioOverview = () => {
     useEffect(() => {
         const fetchPortfolioData = async () => {
             try {
-                const response = await fetch('http://127.0.0.1:8000/stocks/', {
+                const response = await fetch(`${import.meta.env.VITE_BACK_END_SERVER_URL}/stocks/`, {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json',

@@ -15,7 +15,7 @@ const UserIndexPage = () => {
 
   const fetchHoldingsAndPortfolio = async () => {
     try {
-      const holdingsResponse = await fetch('http://127.0.0.1:8000/stocks/', {
+      const holdingsResponse = await fetch(`${import.meta.env.VITE_BACK_END_SERVER_URL}/stocks/`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -30,7 +30,7 @@ const UserIndexPage = () => {
         console.error('Failed to fetch holdings');
       }
 
-      const portfolioResponse = await fetch('http://127.0.0.1:8000/stocks/overview/', {
+      const portfolioResponse = await fetch(`${import.meta.env.VITE_BACK_END_SERVER_URL}/stocks/`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',

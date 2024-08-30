@@ -1,18 +1,16 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { AuthContext } from '../../AuthContext/AuthContext';
-import { useNavigate } from 'react-router-dom';
+
 
 
 const TopPerformers = () => {
     const [topPerformers, setTopPerformers] = useState([]);
     const { authTokens } = useContext(AuthContext);
 
-    const navigate = useNavigate();
-
     useEffect(() => {
         const fetchTopPerformers = async () => {
             try {
-                const response = await fetch('http://127.0.0.1:8000/stocks/top-performers/', {
+                const response = await fetch(`${import.meta.env.VITE_BACK_END_SERVER_URL}/stocks/`, {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json',

@@ -1,16 +1,18 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { AuthContext } from '../../AuthContext/AuthContext';
 import IndividualHolding from './IndividualHolding';
+import { useNavigate } from 'react-router-dom';
 
 const InvestmentHoldings = () => {
     const [holdings, setHoldings] = useState([]);
-    const [selectedHoldingId, setSelectedHoldingId] = useState(null); // Track the selected holding
+    const [selectedHoldingId, setSelectedHoldingId] = useState(null); 
     const { authTokens } = useContext(AuthContext);
+    const navigate = useNavigate();
 
     useEffect(() => {
         const fetchHoldings = async () => {
             try {
-                const response = await fetch('http://127.0.0.1:8000/stocks/', {
+                const response = await fetch(`${import.meta.env.VITE_BACK_END_SERVER_URL}/stocks/`, {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json',
@@ -35,7 +37,7 @@ const InvestmentHoldings = () => {
     const handleDelete = async (holdingId) => {
         if (window.confirm('Are you sure you want to delete this holding?')) {
             try {
-                const response = await fetch(`http://127.0.0.1:8000/stocks/${holdingId}/`, {
+                const response = await fetch(`${import.meta.env.VITE_BACK_END_SERVER_URL}/stocks/${holdingId}/`, {
                     method: 'DELETE',
                     headers: {
                         'Authorization': `Bearer ${authTokens.access}`, 
@@ -80,7 +82,7 @@ const InvestmentHoldings = () => {
     };
 
     const handleHoldingClick = (holdingId) => {
-        setSelectedHoldingId(holdingId); // Set the selected holding ID to render the IndividualHolding component
+        setSelectedHoldingId(holdingId); 
     };
 
     return (
@@ -104,7 +106,7 @@ const InvestmentHoldings = () => {
                             <td>
                                 <button 
                                     className="holding-name-button" 
-                                    onClick={() => handleHoldingClick(holding.id)} // Set the ID to show the IndividualHolding summary
+                                    onClick={() => handleHoldingClick(holding.id)} 
                                 >
                                     {holding.company_name}
                                 </button>
@@ -117,7 +119,7 @@ const InvestmentHoldings = () => {
                                 {calculateTotalGain(holding)}
                             </td>
                             <td>
-                                <button onClick={() => navigate(`/manage-holding/${holding.id}`)}>
+                                <button onClick={() => navigate(`${import.meta.env.VITE_BACK_END_SERVER_URL}/stocks/${holding.id}`)}>
                                     Edit
                                 </button>
                                 <button onClick={() => handleDelete(holding.id)}>
