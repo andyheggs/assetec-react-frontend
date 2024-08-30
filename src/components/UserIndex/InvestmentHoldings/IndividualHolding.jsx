@@ -1,16 +1,19 @@
 import React, { useState, useEffect, useContext } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
 import { AuthContext } from '../../AuthContext/AuthContext';
 import './IndividualHolding.css';
 
-const IndividualHolding = ({ holdingId }) => {
+const IndividualHolding = () => {
     const [holding, setHolding] = useState(null);
     const { authTokens } = useContext(AuthContext);
+    const { id } = useParams();
+    const navigate = useNavigate(); // Use react-router-dom for navigation
 
     useEffect(() => {
-        if (holdingId) {
+        if (id) {
             const fetchHoldingData = async () => {
                 try {
-                    const response = await fetch(`${import.meta.env.VITE_BACK_END_SERVER_URL}/${holdingId}/`, {
+                    const response = await fetch(`${import.meta.env.VITE_BACK_END_SERVER_URL}/stocks/${id}/`, {
                         method: 'GET',
                         headers: {
                             'Content-Type': 'application/json',
@@ -31,7 +34,7 @@ const IndividualHolding = ({ holdingId }) => {
 
             fetchHoldingData();
         }
-    }, [holdingId, authTokens]);
+    }, [id, authTokens]);
 
     const calculatePerformance = () => {
         if (!holding) return 'N/A';
@@ -55,7 +58,7 @@ const IndividualHolding = ({ holdingId }) => {
             <p>Trade Date: {new Date(holding.trade_date).toLocaleDateString()}</p>
             <p>Description: {holding.description}</p>
             <p>Performance: {calculatePerformance()}%</p>
-            <button onClick={() => window.location.href = `/manage-holding/${holding.id}`}>Manage Holding</button>
+            <button onClick={() => navigate(`/manage-holding/${id}`)}>Manage Holding</button>
         </div>
     );
 };
