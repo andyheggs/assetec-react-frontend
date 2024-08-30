@@ -5,7 +5,7 @@ export default defineConfig({
   plugins: [react()],
   server: {
     proxy: {
-      '/auth': 'http://127.0.0.1:8000',
+      '/auth': 'https://assetec-15d8b96cc456.herokuapp.com',
     },
   },
 });
