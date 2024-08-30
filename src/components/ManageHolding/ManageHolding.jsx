@@ -82,7 +82,7 @@ const ManageHolding = () => {
     
         const updatedData = {
             ...formData,
-            owner: formData.owner.id,  // Only send the owner's ID
+            owner: formData.owner.id, 
             quantity: parseFloat(formData.quantity),
             share_price: parseFloat(formData.share_price),
             new_share_price: parseFloat(formData.new_share_price),
