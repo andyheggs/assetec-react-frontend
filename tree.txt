@@ -1,0 +1,58 @@
+.
+├── README.md
+├── eslint.config.js
+├── index.html
+├── package-lock.json
+├── package.json
+├── public
+│   └── vite.svg
+├── src
+│   ├── App.css
+│   ├── App.jsx
+│   ├── assets
+│   │   ├── images
+│   │   │   ├── Project_4-Logo-i.png
+│   │   │   └── Project_4-User_Profile-i.png
+│   │   └── react.svg
+│   ├── components
+│   │   ├── AuthContext
+│   │   │   └── AuthContext.jsx
+│   │   ├── CreateHolding
+│   │   │   ├── CreateHolding.css
+│   │   │   └── CreateHolding.jsx
+│   │   ├── ImageUpload
+│   │   │   ├── ImageUpload.css
+│   │   │   └── ImageUpload.jsx
+│   │   ├── Landing
+│   │   │   ├── LandingPage.css
+│   │   │   └── LandingPage.jsx
+│   │   ├── ManageHolding
+│   │   │   ├── ManageHolding.css
+│   │   │   └── ManageHolding.jsx
+│   │   ├── SignIn
+│   │   │   ├── SignIn.css
+│   │   │   └── SignIn.jsx
+│   │   ├── SignUp
+│   │   │   ├── SignUp.css
+│   │   │   └── SignUp.jsx
+│   │   └── UserIndex
+│   │       ├── InvestmentHoldings
+│   │       │   ├── IndividualHolding.css
+│   │       │   ├── IndividualHolding.jsx
+│   │       │   ├── InvestmentHoldings.css
+│   │       │   └── InvestmentHoldings.jsx
+│   │       ├── PortfolioOverview
+│   │       │   ├── PortfolioOverview.css
+│   │       │   └── PortfolioOverview.jsx
+│   │       ├── TopPerformers
+│   │       │   ├── TopPerformers.css
+│   │       │   └── TopPerformers.jsx
+│   │       ├── UserIndexPage.css
+│   │       └── UserIndexPage.jsx
+│   ├── index.css
+│   ├── main.jsx
+│   └── seed.txt
+├── tree.txt
+└── vite.config.js
+
+16 directories, 39 files

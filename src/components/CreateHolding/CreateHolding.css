@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+  
+html, body {
+    height: 100%;
+    width: 100%;
+    background-color: #1B263B; /* Dark Blue background */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+  
+.landing-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Full viewport height */
+    width: 100vw;  /* Full viewport width */
+    color: white;
+    padding: 20px;
+    background-color: #1B263B; /* Dark Blue background */
+}
+  
+.header {
+    flex: 0 1 100px; /* Header height fixed at 100px */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin: 10px;
+    max-width: 1200px; /* Limit the width to prevent stretching */
+}
+  
+.profile-image {
+    height: 70px;
+    width: auto;
+    padding: 0;  
+}
+  
+.create-holding-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    width: 60%; /* Span 70% of the available width */
+    margin: 0 auto; /* Center the container horizontally */
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+}
+  
+.form-group {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+  
+.form-group input, .form-group textarea {
+    width: 100%; /* Make inputs take full width of their container */
+    max-width: 100%; /* Ensure they don’t exceed the parent container width */
+    padding: 10px; /* Increase padding for better spacing */
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem; /* Increase font size for better readability */
+}
+
+button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 15px;
+    border: none; /* Remove border */
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem; /* Match font size with inputs */
+    margin-top: 10px; /* Add some space above the button */
+}
+

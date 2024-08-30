@@ -95,50 +95,25 @@ html, body {
   margin-top: 20px;
   margin-bottom: 40px;
 }
-.signup-form {
-  background-color: #1e1e1e;
-  padding: 20px;
-  border-radius: 10px;
-  border: 1px solid #4caf50;
-  color: white;
-  width: 100%;
-  max-width: 400px;
-  margin: 50px auto;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+
+.image-container {
+  width: 60%;
+  height: auto;
+  max-width: 800px; /* Limit the width of the image */
 }
 
-.signup-form input {
+.image-container img {
   width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  border-radius: 5px;
-  border: 1px solid #4caf50;
-  background-color: #333;
-  color: white;
-  font-size: 1rem;
+  height: auto; /* Maintain image aspect ratio */
+  object-fit: contain;
 }
 
-.signup-form button {
-  background-color: #4caf50;
+.sub-heading {
+  font-size: 24px;
+  font-weight: bold;
   color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1.2rem;
   margin-top: 20px;
-  width: 100%;
-  transition: background-color 0.3s ease;
-}
-
-.signup-form button:hover {
-  background-color: #45a049;
-}
-
-.error-message {
-  color: #f44336; /* Red color for error messages */
-  font-size: 0.9rem;
-  margin-top: 10px;
-  margin-bottom: 20px;
+  width: 60%;
+  max-width: 800px; /* Limit the width to prevent stretching */
   text-align: center;
 }

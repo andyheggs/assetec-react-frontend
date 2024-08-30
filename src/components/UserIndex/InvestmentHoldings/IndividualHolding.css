@@ -1,0 +1,30 @@
+.individual-holding-container {
+    background-color: #1e1e1e;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.individual-holding-container h2 {
+    margin-bottom: 15px;
+}
+
+.individual-holding-container p {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.individual-holding-container button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.individual-holding-container button:hover {
+    background-color: #45a049;
+}

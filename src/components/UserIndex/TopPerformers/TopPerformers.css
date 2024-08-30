@@ -1,0 +1,26 @@
+.top-performers-container {
+    background-color: #1e1e1e;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.top-performers-container h2 {
+    margin-bottom: 15px;
+}
+
+.top-performers-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.top-performers-container li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.top-performers-container li span {
+    font-size: 1.1rem;
+}

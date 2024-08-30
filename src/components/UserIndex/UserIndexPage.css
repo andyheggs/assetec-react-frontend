@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: #1B263B; /* Dark Blue background */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.landing-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Full viewport height */
+  width: 100vw;  /* Full viewport width */
+  color: white;
+  padding: 20px;
+  background-color: #1B263B; /* Dark Blue background */
+}
+
+.header {
+  flex: 0 1 100px; /* Header height fixed at 100px */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin: 10px;
+  max-width: 1200px; /* Limit the width to prevent stretching */
+}
+
+.profile-image {
+  height: 70px;
+  width: auto;
+  padding: 0;  
+}
+
+.user-index-page {
+    display: flex;
+    flex: 1; /* Take up the remaining space */
+    flex-direction: row; /* Ensure the main layout is row */
+    background-color: #1e1e1e;
+    border: 5px solid #2ECC71;
+    margin: 10px;
+    border-radius: 20px;
+}
+
+.user-index-page .top-performers-container {
+    flex: 0 1 200px; /* Fixed width for the left container */
+    background-color: #2c2c2c;
+    padding: 5px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.user-index-page .right-containers {
+    display: flex;
+    flex-direction: column; /* Stack the children vertically */
+    flex: 1; /* Take the remaining width */
+    margin: 10px;
+}
+
+.user-index-page .portfolio-overview-container {
+    flex: 0 1 150px; /* Fixed height for the top right container */
+    background-color: #2c2c2c;
+    padding: 20px;
+    margin: 10px 10px 0 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.user-index-page .investment-holdings-container {
+    flex: 1; /* Take up the remaining space in the right column */
+    background-color: #2c2c2c;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Additional styles for tables in the investment holdings component */
+.investment-holdings-container .holdings-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.holdings-table th, .holdings-table td {
+  text-align: left;
+  padding: 12px;
+  border-bottom: 1px solid #444;
+  color: rgb(226, 199, 199);
+}
+
+.holdings-table th {
+  background-color: #333;
+}
+
+.holdings-table tr:hover {
+  background-color: #3a3a3a;
+}
+
+/* Ensure individual holding details are distinct when displayed */
+.user-index-page .individual-holding-container {
+  background-color: #333;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+}
+
+.individual-holding-container h2 {
+  color: #4caf50;
+}
+
+.individual-holding-container p {
+  color: #ccc;
+  margin-bottom: 10px;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .user-index-page {
+      flex-direction: column; /* Stack containers on smaller screens */
+      padding: 10px;
+  }
+
+  .user-index-page .top-performers-container,
+  .user-index-page .portfolio-overview-container,
+  .user-index-page .investment-holdings-container {
+      padding: 15px;
+      margin: 5px; /* Adjust margins for smaller screens */
+  }
+
+  .holdings-table th, .holdings-table td {
+      padding: 10px;
+  }
+}

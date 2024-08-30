@@ -1,0 +1,204 @@
+[
+    {
+        "company_code": "AAPL",
+        "company_name": "Apple Inc.",
+        "trade_date": "2023-08-15",
+        "quantity": 50,
+        "share_price": 185.50,
+        "brokerage_fees": 10.00,
+        "total_investment": 9285.00,
+        "description": "Apple Inc. is an American multinational technology company headquartered in Cupertino, California, that designs, develops, and sells consumer electronics, computer software, and online services. It is considered one of the Big Tech technology companies, alongside Amazon, Google, Microsoft, and Facebook. Apple’s hardware products include the iPhone smartphone, the iPad tablet computer, the Mac personal computer, the iPod portable media player, the Apple Watch smartwatch, the Apple TV digital media player, and the HomePod smart speaker. Apple's software includes macOS, iOS, iPadOS, watchOS, and tvOS operating systems, the iTunes media player, the Safari web browser, the Shazam music identifier, and the iLife and iWork creativity and productivity suites. Apple has established itself as a leader in the technology industry by pushing the boundaries of innovation and setting the standard for quality in design."
+    },
+    {
+        "company_code": "MSFT",
+        "company_name": "Microsoft Corporation",
+        "trade_date": "2023-08-16",
+        "quantity": 30,
+        "share_price": 310.20,
+        "brokerage_fees": 12.50,
+        "total_investment": 9318.50,
+        "description": "Microsoft Corporation is an American multinational technology company with headquarters in Redmond, Washington. It develops, manufactures, licenses, supports, and sells computer software, consumer electronics, personal computers, and related services. Its best-known software products are the Microsoft Windows line of operating systems, the Microsoft Office suite, and the Internet Explorer and Edge web browsers. Its flagship hardware products are the Xbox video game consoles and the Microsoft Surface lineup of touchscreen personal computers. Microsoft is one of the Big Five technology companies alongside Google, Apple, Amazon, and Facebook. Microsoft was founded by Bill Gates and Paul Allen on April 4, 1975, to develop and sell BASIC interpreters for the Altair 8800. It rose to dominate the personal computer operating system market with MS-DOS in the mid-1980s, followed by Microsoft Windows."
+    },
+    {
+        "company_code": "GOOGL",
+        "company_name": "Alphabet Inc.",
+        "trade_date": "2023-08-17",
+        "quantity": 20,
+        "share_price": 145.70,
+        "brokerage_fees": 8.75,
+        "total_investment": 2916.75,
+        "description": "Alphabet Inc. is an American multinational conglomerate created through a corporate restructuring of Google on October 2, 2015, and became the parent company of Google and several former Google subsidiaries. The two founders of Google assumed executive roles in the new company, with Larry Page serving as CEO and Sergey Brin as president. Alphabet is the world's fifth-largest technology company by revenue and one of the world's most valuable companies. It primarily deals in a wide array of sectors, including internet services and products, advertising, and AI research and development, among others. The company's major offerings include search engine Google, the Android mobile operating system, YouTube video platform, and other software like Gmail and Google Docs."
+    },
+    {
+        "company_code": "AMZN",
+        "company_name": "Amazon.com, Inc.",
+        "trade_date": "2023-08-18",
+        "quantity": 25,
+        "share_price": 137.90,
+        "brokerage_fees": 9.00,
+        "total_investment": 3456.50,
+        "description": "Amazon.com, Inc. is an American multinational technology company which focuses on e-commerce, cloud computing, digital streaming, and artificial intelligence. It is one of the Big Five companies in the U.S. information technology industry, alongside Alphabet, Apple, Meta, and Microsoft. The company has been referred to as 'one of the most influential economic and cultural forces in the world' as well as the world's most valuable brand. Amazon was founded by Jeff Bezos from his garage in Bellevue, Washington, on July 5, 1994. It initially started as an online marketplace for books but later expanded to sell electronics, software, video games, apparel, furniture, food, toys, and jewelry. In 2015, Amazon surpassed Walmart as the most valuable retailer in the United States by market capitalization."
+    },
+    {
+        "company_code": "TSLA",
+        "company_name": "Tesla, Inc.",
+        "trade_date": "2023-08-19",
+        "quantity": 15,
+        "share_price": 720.45,
+        "brokerage_fees": 15.00,
+        "total_investment": 10821.75,
+        "description": "Tesla, Inc. is an American multinational automotive and clean energy company based in Palo Alto, California. Tesla's current products include electric cars, battery energy storage from home to grid-scale, solar panels and solar roof tiles, as well as other related products and services. Founded in 2003 by Martin Eberhard and Marc Tarpenning as Tesla Motors, the company's name is a tribute to inventor and electrical engineer Nikola Tesla. Tesla is ranked as the world's best-selling plug-in and battery electric passenger car manufacturer, with a market share of 16% of the plug-in segment and 23% of the battery-electric segment. Through its subsidiary Tesla Energy, the company develops and is a major installer of photovoltaic systems in the United States."
+    }
+]
+[
+    {
+        "company_code": "NVDA",
+        "company_name": "NVIDIA Corporation",
+        "trade_date": "2023-08-20",
+        "quantity": 40,
+        "share_price": 495.30,
+        "brokerage_fees": 18.00,
+        "total_investment": 19830.00,
+        "description": "NVIDIA Corporation is an American multinational technology company incorporated in Delaware and based in Santa Clara, California. It designs graphics processing units (GPUs) for the gaming and professional markets, as well as system on a chip units (SoCs) for the mobile computing and automotive market. Its primary GPU product line, labeled 'GeForce,' is in direct competition with GPUs by Advanced Micro Devices (AMD) under the 'Radeon' brand. NVIDIA expanded its presence in the gaming industry with its Shield Portable, Shield Tablet, and Shield Android TV, as well as its cloud gaming service GeForce Now. In addition to GPU manufacturing, NVIDIA provides an API called CUDA that allows the creation of massively parallel programs which utilize GPUs."
+    },
+    {
+        "company_code": "FB",
+        "company_name": "Meta Platforms, Inc.",
+        "trade_date": "2023-08-21",
+        "quantity": 35,
+        "share_price": 289.90,
+        "brokerage_fees": 14.25,
+        "total_investment": 10161.75,
+        "description": "Meta Platforms, Inc., trading as Meta and formerly known as Facebook, Inc., is an American multinational technology conglomerate based in Menlo Park, California. The company is the parent organization of Facebook, Instagram, and WhatsApp, among other subsidiaries. Meta is one of the world's most valuable companies and is considered one of the Big Five American information technology companies, along with Alphabet, Amazon, Apple, and Microsoft. Meta's products and services also include Messenger, Facebook Watch, and Facebook Portal. It has also acquired Oculus, Giphy, and Mapillary, and has a 9.9% stake in Jio Platforms. Meta's mission is to give people the power to build community and bring the world closer together."
+    },
+    {
+        "company_code": "INTC",
+        "company_name": "Intel Corporation",
+        "trade_date": "2023-08-22",
+        "quantity": 60,
+        "share_price": 55.70,
+        "brokerage_fees": 13.75,
+        "total_investment": 3355.75,
+        "description": "Intel Corporation is an American multinational corporation and technology company headquartered in Santa Clara, California. It is the world's largest and highest valued semiconductor chip manufacturer on the basis of revenue, and is the developer of the x86 series of microprocessors, the processors found in most personal computers (PCs). Intel supplies processors for computer system manufacturers such as Apple, Lenovo, HP, and Dell. Intel also manufactures motherboard chipsets, network interface controllers and integrated circuits, flash memory, graphics chips, embedded processors and other devices related to communications and computing."
+    },
+    {
+        "company_code": "NFLX",
+        "company_name": "Netflix, Inc.",
+        "trade_date": "2023-08-23",
+        "quantity": 20,
+        "share_price": 405.80,
+        "brokerage_fees": 16.50,
+        "total_investment": 8124.50,
+        "description": "Netflix, Inc. is an American subscription video on-demand over-the-top streaming service and production company. Launched on August 29, 1997, it offers a film and television series library through distribution deals as well as its own productions, known as Netflix Originals. As of 2023, Netflix has over 200 million subscribers worldwide, including more than 73 million in the United States. The company is known for its original content, which includes series like 'Stranger Things,' 'The Crown,' and 'The Witcher,' and movies like 'The Irishman' and 'Bird Box.' Netflix is also involved in producing original documentaries, animated films, and other entertainment media."
+    },
+    {
+        "company_code": "ADBE",
+        "company_name": "Adobe Inc.",
+        "trade_date": "2023-08-24",
+        "quantity": 25,
+        "share_price": 645.20,
+        "brokerage_fees": 20.00,
+        "total_investment": 16250.00,
+        "description": "Adobe Inc. is an American multinational computer software company headquartered in San Jose, California. It historically focused upon the creation of multimedia and creativity software products, with a more recent foray towards digital marketing software. Notable products include Photoshop, Acrobat Reader, and the Portable Document Format (PDF), as well as Adobe Creative Cloud. Adobe was founded in December 1982 by John Warnock and Charles Geschke, who established the company after leaving Xerox PARC to develop and sell the PostScript page description language. Adobe was a pioneer in desktop publishing, and its flagship products include Illustrator, Premiere Pro, and After Effects."
+    },
+    {
+        "company_code": "CSCO",
+        "company_name": "Cisco Systems, Inc.",
+        "trade_date": "2023-08-25",
+        "quantity": 50,
+        "share_price": 58.60,
+        "brokerage_fees": 12.00,
+        "total_investment": 2942.00,
+        "description": "Cisco Systems, Inc. is an American multinational technology conglomerate headquartered in San Jose, California, in the center of Silicon Valley. Cisco develops, manufactures, and sells networking hardware, software, telecommunications equipment, and other high-technology services and products. Through its numerous acquired subsidiaries, such as OpenDNS, WebEx, Jabber, and Jasper, Cisco specializes in specific tech markets, such as Internet of Things (IoT), domain security, and energy management. Cisco is considered a leading company in its field and was a pioneer in creating the Internet Protocol (IP) based network routing systems, which are now a fundamental part of the internet infrastructure."
+    },
+    {
+        "company_code": "PEP",
+        "company_name": "PepsiCo, Inc.",
+        "trade_date": "2023-08-26",
+        "quantity": 30,
+        "share_price": 160.75,
+        "brokerage_fees": 11.50,
+        "total_investment": 4843.00,
+        "description": "PepsiCo, Inc. is an American multinational food, snack, and beverage corporation headquartered in Purchase, New York. PepsiCo's business encompasses all aspects of the food and beverage market. It oversees the manufacturing, distribution, and marketing of its products. Its main brands include Pepsi, Mountain Dew, Tropicana, Lay's, Gatorade, Quaker Oats, and others. The company was formed through the merger of Pepsi-Cola and Frito-Lay in 1965, and it has since expanded from its namesake product, Pepsi, to a broader range of food and beverage brands. As of 2021, PepsiCo had a market capitalization of over $230 billion."
+    },
+    {
+        "company_code": "QCOM",
+        "company_name": "QUALCOMM Incorporated",
+        "trade_date": "2023-08-27",
+        "quantity": 45,
+        "share_price": 130.55,
+        "brokerage_fees": 10.00,
+        "total_investment": 5924.75,
+        "description": "QUALCOMM Incorporated is an American multinational corporation headquartered in San Diego, California, and incorporated in Delaware. It creates semiconductors, software, and services related to wireless technology. It owns patents critical to the 5G, 4G, CDMA2000, TD-SCDMA, and WCDMA mobile communications standards. Qualcomm was established in 1985 by Irwin M. Jacobs and six other co-founders. Its early cellular communication technology helped propel it to become one of the largest manufacturers of semiconductors for mobile phones. The company is heavily involved in the research and development of next-generation wireless technologies and is a major player in the global telecommunications industry."
+    },
+    {
+        "company_code": "AVGO",
+        "company_name": "Broadcom Inc.",
+        "trade_date": "2023-08-28",
+        "quantity": 15,
+        "share_price": 785.25,
+        "brokerage_fees": 22.50,
+        "total_investment": 11801.25,
+        "description": "Broadcom Inc. is an American designer, developer, manufacturer, and global supplier of a wide range of semiconductor and infrastructure software products. Broadcom's product portfolio serves four primary markets: wired infrastructure, wireless communications, enterprise storage, and industrial & other. The company's offerings include semiconductor devices and a range of software solutions. Founded as a division of Hewlett-Packard in 1961, Broadcom has grown through multiple mergers and acquisitions, becoming a key player in the semiconductor industry. Broadcom's products are integral to the operation of many electronic devices, ranging from mobile phones to servers and networking systems."
+    },
+    {
+        "company_code": "AMGN",
+        "company_name": "Amgen Inc.",
+        "trade_date": "2023-08-29",
+        "quantity": 20,
+        "share_price": 240.50,
+        "brokerage_fees": 13.00,
+        "total_investment": 4823.00,
+        "description": "Amgen Inc. is an American multinational biopharmaceutical company headquartered in Thousand Oaks, California. One of the world's largest independent biotechnology companies, Amgen is focused on discovering, developing, manufacturing, and delivering innovative human therapeutics. The company's product portfolio includes some of the most impactful drugs in biotechnology, such as Neulasta, Enbrel, and Prolia. Founded in 1980, Amgen has become a leader in the biotechnology industry, using its expertise in molecular biology and biochemistry to advance the development of therapies that improve patient outcomes. The company's mission is to serve patients by transforming scientific discoveries into novel therapies."
+    },
+    {
+        "company_code": "AMD",
+        "company_name": "Advanced Micro Devices, Inc.",
+        "trade_date": "2023-08-30",
+        "quantity": 60,
+        "share_price": 112.35,
+        "brokerage_fees": 15.00,
+        "total_investment": 6768.00,
+        "description": "Advanced Micro Devices, Inc. (AMD) is an American multinational semiconductor company based in Santa Clara, California. AMD develops computer processors and related technologies for business and consumer markets. While initially it manufactured its own processors, the company later outsourced manufacturing, a practice known as fabless manufacturing. AMD's main products include microprocessors, motherboard chipsets, embedded processors, and graphics processors (GPUs) for servers, workstations, personal computers, and embedded system applications. AMD is a significant competitor to Intel in the processor market and NVIDIA in the GPU market."
+    },
+    {
+        "company_code": "TXN",
+        "company_name": "Texas Instruments Incorporated",
+        "trade_date": "2023-08-31",
+        "quantity": 35,
+        "share_price": 178.40,
+        "brokerage_fees": 14.50,
+        "total_investment": 6328.50,
+        "description": "Texas Instruments Incorporated (TI) is an American technology company headquartered in Dallas, Texas, that designs and manufactures semiconductors and various integrated circuits, which it sells to electronics designers and manufacturers globally. TI is one of the top 10 semiconductor companies worldwide, based on sales volume. Its products include analog chips, embedded processors, and digital light processing technology, which it uses in its projectors. TI's analog chips are used in everything from smartphones to industrial machinery. The company has a long history in the semiconductor industry and continues to be a leader in innovation and technology."
+    },
+    {
+        "company_code": "PYPL",
+        "company_name": "PayPal Holdings, Inc.",
+        "trade_date": "2023-09-01",
+        "quantity": 45,
+        "share_price": 70.20,
+        "brokerage_fees": 12.00,
+        "total_investment": 3171.00,
+        "description": "PayPal Holdings, Inc. is an American multinational financial technology company operating an online payments system in most countries that support online money transfers, serving as an electronic alternative to traditional paper methods such as checks and money orders. The company operates as a payment processor for online vendors, auction sites, and many other commercial users, for which it charges a fee. Established in 1998 as Confinity, PayPal went public in 2002 and became a wholly-owned subsidiary of eBay later that year, valued at $1.5 billion. In 2015, PayPal was spun off from eBay into an independent company."
+    },
+    {
+        "company_code": "ORCL",
+        "company_name": "Oracle Corporation",
+        "trade_date": "2023-09-02",
+        "quantity": 50,
+        "share_price": 115.65,
+        "brokerage_fees": 15.75,
+        "total_investment": 5797.25,
+        "description": "Oracle Corporation is an American multinational computer technology corporation headquartered in Austin, Texas. The company sells database software and technology, cloud engineered systems, and enterprise software products, particularly its own brands of database management systems. In 2021, Oracle was the third-largest software company in the world by revenue and market capitalization. The company develops and builds tools for database development and systems of middle-tier software, enterprise resource planning (ERP) software, customer relationship management (CRM) software, and supply chain management (SCM) software. Oracle is known for its Oracle Autonomous Database, Oracle Cloud Infrastructure, and its hardware products."
+    },
+    {
+        "company_code": "COST",
+        "company_name": "Costco Wholesale Corporation",
+        "trade_date": "2023-09-03",
+        "quantity": 25,
+        "share_price": 555.50,
+        "brokerage_fees": 18.25,
+        "total_investment": 13905.75,
+        "description": "Costco Wholesale Corporation, commonly known as Costco, is an American multinational corporation that operates a chain of membership-only big-box retail stores. Costco was the world's fifth-largest retailer in 2021 and the world's largest retailer of choice and prime beef, organic foods, rotisserie chicken, and wine. The company was founded in 1976 as Price Club by James Sinegal and Jeffrey H. Brotman. The first Costco warehouse opened in 1983 in Seattle. Costco has expanded to over 800 locations worldwide and is known for its high-quality products, low prices, and no-frills warehouse experience."
+    }
+]

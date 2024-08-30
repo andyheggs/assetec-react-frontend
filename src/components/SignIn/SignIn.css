@@ -1,0 +1,144 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  html, body {
+    height: 100%;
+    width: 100%;
+    background-color: #1B263B; /* Dark Blue background */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+  }
+  
+  .landing-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    color: white;
+    padding: 20px;
+    background-color: #1B263B; /* Dark Blue background */
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px; /* Limit the width to prevent stretching */
+    padding: 20px;
+    align-items: center;
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    height: 60px;
+    width: auto;
+    margin-right: 10px; /* Margin between logo and name */
+  }
+  
+  .logo-name {
+    color: #2ecc71; /* Emerald Green color */
+    font-weight: bold;
+    font-size: 60px;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .nav-button {
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  .signup-button {
+    background-color: #00FFB3; /* Neon Green */
+    color: #1B263B; /* Dark Blue */
+    border: 2px solid #1B263B;
+  }
+  
+  .signin-button {
+    background-color: #1B263B; /* Dark Blue */
+    color: #00FFB3; /* Neon Green */
+    border: 2px solid #00FFB3;
+  }
+  
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    max-width: 1200px; /* Limit the width to prevent stretching */
+    padding: 20px;
+  }
+  
+  .main-heading {
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+.signin-form {
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #4caf50;
+  color: white;
+  width: 100%;
+  max-width: 400px;
+  margin: 50px auto;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.signin-form input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #4caf50;
+  background-color: #333;
+  color: white;
+  font-size: 1rem;
+}
+
+.signin-form button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  margin-top: 20px;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.signin-form button:hover {
+    background-color: #45a049;
+}
+
+.error-message {
+    color: #f44336; /* Red color for error messages */
+    font-size: 0.9rem;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
