@@ -2,21 +2,6 @@
 
 Assetec is a full-stack web application that allows users to manage their stock portfolio efficiently. Built using Django for the backend and React with Vite for the frontend, the app provides full CRUD (Create, Read, Update, Delete) functionalities for managing stock holdings. The application supports user authentication, portfolio management, and dynamic data updates for stock values.
 
-## Table of Contents
-
-- [Live Demo](%22%E2%80%8C%22 "‌")
-- [Features](%22%E2%80%8C%22 "‌")
-- [Technology Stack](%22%E2%80%8C%22 "‌")
-- [Setup and Installation](%22%E2%80%8C%22 "‌")
-- [Environment Variables](%22%E2%80%8C%22 "‌")
-- [Folder Structure](%22%E2%80%8C%22 "‌")
-- [Key Components](%22%E2%80%8C%22 "‌")
-- [API Endpoints](%22%E2%80%8C%22 "‌")
-- [Potential Future Developments](%22%E2%80%8C%22 "‌")
-- [Project Management](%22%E2%80%8C%22 "‌")
-- [Contributing](%22%E2%80%8C%22 "‌")
-- [License](%22%E2%80%8C%22 "‌")
-
 ## Live Demo
 
 - Backend: [https://assetec-15d8b96cc456.herokuapp.com/](https://assetec-15d8b96cc456.herokuapp.com/ "‌")
