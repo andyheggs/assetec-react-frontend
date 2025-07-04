@@ -1,13 +1,13 @@
+/* TopPerformers Component Specific Styles */
+
+/* Container inherits from global .container class */
 .top-performers-container {
-    background-color: #1e1e1e;
-    color: white;
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 20px;
+    /* Inherits from global .container class in the parent page */
+    margin-bottom: var(--spacing-lg);
 }
 
 .top-performers-container h2 {
-    margin-bottom: 15px;
+    margin-bottom: var(--spacing-md);
 }
 
 .top-performers-container ul {
@@ -18,7 +18,7 @@
 .top-performers-container li {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 10px;
+    margin-bottom: var(--spacing-sm);
 }
 
 .top-performers-container li span {

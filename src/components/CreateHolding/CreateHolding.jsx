@@ -67,15 +67,15 @@ const CreateHolding = () => {
     };
 
     return (
-        <div className="landing-container">
-            <div className="header">
+        <div className="page-container page-container--full-height landing-container">
+            <div className="header header--fixed">
                 <div className="logo-container">
                     <img 
                         src="https://res.cloudinary.com/dim47nr4g/image/upload/v1724788755/Project_4-Logo-i_g0noth.png" 
                         alt="Assetec Logo" 
-                        className="logo"
+                        className="logo logo--small"
                     />
-                    <div className="logo-name">assetec</div>
+                    <div className="logo-name logo-name--small">assetec</div>
                 </div>
                 <div>
                     {user && user.profile_image && (
@@ -87,14 +87,14 @@ const CreateHolding = () => {
                     )}
                 </div>    
                 <div className="nav-links">
-                    <div className="nav-button signup-button" onClick={handleSignOut}>
+                    <div className="btn btn--nav btn--signup nav-button signup-button" onClick={handleSignOut}>
                         Sign-out
                     </div>
                 </div>
             </div>
 
-            <div className="create-holding-container">
-                <h2>Add New Holding</h2>
+            <div className="container container--width-60 create-holding-container">
+                <h2 className="heading-section">Add New Holding</h2>
                 <form onSubmit={handleSubmit}>
                     <div className="form-group">
                         <label htmlFor="company_code">Company Code</label>
@@ -105,6 +105,7 @@ const CreateHolding = () => {
                             placeholder="Stock ticker symbol, e.g., AAPL"
                             value={formData.company_code}
                             onChange={handleChange}
+                            className="form-input"
                             required
                         />
                     </div>
@@ -117,6 +118,7 @@ const CreateHolding = () => {
                             placeholder="Full name of the company, e.g., Apple Inc."
                             value={formData.company_name}
                             onChange={handleChange}
+                            className="form-input"
                             required
                         />
                     </div>
@@ -128,6 +130,7 @@ const CreateHolding = () => {
                             name="trade_date"
                             value={formData.trade_date}
                             onChange={handleChange}
+                            className="form-input"
                             required
                         />
                     </div>
@@ -140,6 +143,7 @@ const CreateHolding = () => {
                             placeholder="Number of shares purchased"
                             value={formData.quantity}
                             onChange={handleChange}
+                            className="form-input"
                             required
                         />
                     </div>
@@ -152,6 +156,7 @@ const CreateHolding = () => {
                             placeholder="Price per share at the time of purchase"
                             value={formData.share_price}
                             onChange={handleChange}
+                            className="form-input"
                             required
                         />
                     </div>
@@ -164,6 +169,7 @@ const CreateHolding = () => {
                             placeholder="Any brokerage fees or taxes associated with the purchase"
                             value={formData.brokerage_fees}
                             onChange={handleChange}
+                            className="form-input"
                         />
                     </div>
                     <div className="form-group">
@@ -174,9 +180,10 @@ const CreateHolding = () => {
                             placeholder="Relevant notes or information specific to this purchase"
                             value={formData.description}
                             onChange={handleChange}
+                            className="form-input"
                         />
                     </div>
-                    <button type="submit">Add Holding</button>
+                    <button type="submit" className="btn btn--primary btn--standard">Add Holding</button>
                 </form>
             </div>
         </div>    

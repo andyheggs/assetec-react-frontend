@@ -26,41 +26,41 @@ const SignIn = () => {
   };
 
   return (
-    <div className="landing-container">
+    <div className="page-container landing-container">
       <div className="header">
         <div className="logo-container">
           <img
             src="https://res.cloudinary.com/dim47nr4g/image/upload/v1724788755/Project_4-Logo-i_g0noth.png"
             alt="Assetec Logo"
-            className="logo"
+            className="logo logo--small"
           />
-          <div className="logo-name">assetec</div>
+          <div className="logo-name logo-name--small">assetec</div>
         </div>
         <div className="nav-links">
-          <div className="nav-button signup-button" onClick={handleSignUp}>
+          <div className="btn btn--nav btn--signup nav-button signup-button" onClick={handleSignUp}>
             Sign-up
           </div>
         </div>
       </div>
       <div className="main-content">
-        <div className="main-heading">
+        <div className="heading-main heading-main--standard main-heading">
             take your future into your own hands...
         </div>
-        <form onSubmit={handleSubmit} className="signin-form">
+        <form onSubmit={handleSubmit} className="container container--centered container--bordered signin-form">
           <input
             name="username"
             placeholder="Username"
             onChange={handleChange}
-            className="signin-input"
+            className="form-input signin-input"
           />
           <input
             type="password"
             name="password"
             placeholder="Password"
             onChange={handleChange}
-            className="signin-input"
+            className="form-input signin-input"
           />
-          <button type="submit" className="signin-button">
+          <button type="submit" className="btn btn--primary btn--large signin-button">
             Sign In
           </button>
         </form>

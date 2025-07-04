@@ -69,15 +69,15 @@ const UserIndexPage = () => {
   }
   
   return (
-    <div className="landing-container">
-      <div className="header">
+    <div className="page-container page-container--full-height landing-container">
+      <div className="header header--fixed">
         <div className="logo-container">
           <img 
             src="https://res.cloudinary.com/dim47nr4g/image/upload/v1724788755/Project_4-Logo-i_g0noth.png" 
             alt="Assetec Logo" 
-            className="logo"
+            className="logo logo--small"
           />
-          <div className="logo-name">assetec</div>
+          <div className="logo-name logo-name--small">assetec</div>
         </div>
         <div>
           {user && user.profile_image && (
@@ -89,7 +89,7 @@ const UserIndexPage = () => {
             )}
         </div>    
         <div className="nav-links">
-          <div className="nav-button signup-button" onClick={handleSignOut}>
+          <div className="btn btn--nav btn--signup nav-button signup-button" onClick={handleSignOut}>
             Sign-out
           </div>
         </div>

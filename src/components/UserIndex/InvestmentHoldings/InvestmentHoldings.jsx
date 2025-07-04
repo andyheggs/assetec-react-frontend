@@ -86,9 +86,9 @@ const InvestmentHoldings = () => {
     };
 
     return (
-        <div className="investment-holdings-container">
-            <h2>Your Investments</h2>
-            <table className="holdings-table">
+        <div className="container investment-holdings-container">
+            <h2 className="heading-section">Your Investments</h2>
+            <table className="table holdings-table">
                 <thead>
                     <tr>
                         <th>Company Name</th>
@@ -105,7 +105,7 @@ const InvestmentHoldings = () => {
                         <tr key={holding.id}>
                             <td>
                                 <button 
-                                    className="holding-name-button" 
+                                    className="btn--link holding-name-button" 
                                     onClick={() => handleHoldingClick(holding.id)} 
                                 >
                                     {holding.company_name}
@@ -120,10 +120,16 @@ const InvestmentHoldings = () => {
                             </td>
                             <td>
                                 {/* Navigate to Manage Holding Page */}
-                                <button onClick={() => navigate(`/manage-holding/${holding.id}`)}>
+                                <button 
+                                    className="btn btn--primary btn--small"
+                                    onClick={() => navigate(`/manage-holding/${holding.id}`)}
+                                >
                                     Edit
                                 </button>
-                                <button onClick={() => handleDelete(holding.id)}>
+                                <button 
+                                    className="btn btn--danger btn--small"
+                                    onClick={() => handleDelete(holding.id)}
+                                >
                                     Delete
                                 </button>
                             </td>
