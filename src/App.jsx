@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import { AuthProvider, AuthContext } from './components/AuthContext/AuthContext';
@@ -21,39 +20,43 @@ function ProtectedRoute({ children }) {
 
 function App() {
     return (
-        <AuthProvider>
-            <Router>
-                <Routes>
-                    <Route path="/" element={<LandingPage />} />
-                    <Route path="/sign-up" element={<SignUp />} />
-                    <Route path="/sign-in" element={<SignIn />} />
-                    <Route
-                        path="/index"
-                        element={
-                            <ProtectedRoute>
-                                <UserIndexPage />
-                            </ProtectedRoute>
-                        }
-                    />
-                    <Route
-                        path="/manage-holding/:id"
-                        element={
-                            <ProtectedRoute>
-                                <ManageHolding />
-                            </ProtectedRoute>
-                        }
-                    />
-                    <Route
-                        path="/create-holding"
-                        element={
-                            <ProtectedRoute>
-                                <CreateHolding />
-                            </ProtectedRoute>
-                        }
-                    />
-                </Routes>
-            </Router>
-        </AuthProvider>
+        <div className="app-viewport">
+            <div className="app-content">
+                <AuthProvider>
+                    <Router>
+                        <Routes>
+                            <Route path="/" element={<LandingPage />} />
+                            <Route path="/sign-up" element={<SignUp />} />
+                            <Route path="/sign-in" element={<SignIn />} />
+                            <Route
+                                path="/index"
+                                element={
+                                    <ProtectedRoute>
+                                        <UserIndexPage />
+                                    </ProtectedRoute>
+                                }
+                            />
+                            <Route
+                                path="/manage-holding/:id"
+                                element={
+                                    <ProtectedRoute>
+                                        <ManageHolding />
+                                    </ProtectedRoute>
+                                }
+                            />
+                            <Route
+                                path="/create-holding"
+                                element={
+                                    <ProtectedRoute>
+                                        <CreateHolding />
+                                    </ProtectedRoute>
+                                }
+                            />
+                        </Routes>
+                    </Router>
+                </AuthProvider>
+            </div>
+        </div>
     );
 }
 
