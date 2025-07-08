@@ -9,10 +9,14 @@
     border: 5px solid var(--color-emerald-green);
     margin: var(--spacing-sm);
     border-radius: var(--border-radius-large);
+    max-width: 100%; /* Prevent overflow */
+    min-width: 0; /* Allow shrinking */
+    overflow: hidden; /* Prevent content overflow */
 }
 
 .user-index-page .top-performers-container {
-    flex: 0 1 200px; /* Fixed width for the left container */
+    flex: 0 1 clamp(180px, 25vw, 300px); /* Responsive width for the left container */
+    min-width: 0; /* Allow shrinking */
     background-color: var(--bg-container-medium);
     padding: var(--spacing-xs);
     margin: var(--spacing-lg);
@@ -24,11 +28,12 @@
     display: flex;
     flex-direction: column; /* Stack the children vertically */
     flex: 1; /* Take the remaining width */
+    min-width: 0; /* Allow shrinking */
     margin: var(--spacing-sm);
 }
 
 .user-index-page .portfolio-overview-container {
-    flex: 0 1 150px; /* Fixed height for the top right container */
+    flex: 0 1 clamp(120px, 20vh, 200px); /* Responsive height for the top right container */
     background-color: var(--bg-container-medium);
     padding: var(--spacing-lg);
     margin: var(--spacing-sm) var(--spacing-sm) 0 var(--spacing-sm);
@@ -43,12 +48,23 @@
     margin: var(--spacing-sm);
     border-radius: var(--border-radius-medium);
     box-shadow: var(--box-shadow-default);
+    min-width: 0; /* Allow shrinking */
+    overflow: hidden; /* Prevent content overflow */
+}
+
+/* Table wrapper for responsive handling */
+.investment-holdings-container .table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
 }
 
 /* Additional styles for tables in the investment holdings component */
 .investment-holdings-container .holdings-table {
   width: 100%;
+  max-width: 100%; /* Prevent table overflow */
   border-collapse: collapse;
+  table-layout: auto; /* Allow responsive table layout */
+  overflow-x: auto; /* Enable horizontal scroll for table if needed */
 }
 
 .holdings-table th, .holdings-table td {
@@ -56,6 +72,8 @@
   padding: 12px;
   border-bottom: 1px solid #444;
   color: rgb(226, 199, 199);
+  word-wrap: break-word; /* Prevent long text from causing overflow */
+  min-width: 0; /* Allow cell content to shrink */
 }
 
 .holdings-table th {
@@ -100,5 +118,47 @@
 
   .holdings-table th, .holdings-table td {
       padding: var(--spacing-sm);
+  }
+}
+
+/* High-DPI and compact layout optimizations */
+@media screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1366px),
+       screen and (min-resolution: 192dpi) and (max-width: 1366px) {
+  .user-index-page {
+    flex-direction: column;
+    margin: clamp(0.25rem, 1vw, var(--spacing-xs));
+  }
+  
+  .user-index-page .top-performers-container {
+    flex: none;
+    margin: var(--spacing-sm);
+  }
+  
+  .user-index-page .right-containers {
+    margin: var(--spacing-xs);
+  }
+  
+  .user-index-page .portfolio-overview-container,
+  .user-index-page .investment-holdings-container {
+    margin: var(--spacing-xs);
+    padding: clamp(0.5rem, 2vw, var(--spacing-md));
+  }
+}
+
+/* Medium screens - tablet landscape and small desktop */
+@media (max-width: 1024px) {
+  .user-index-page .top-performers-container {
+    flex: 0 1 clamp(160px, 30vw, 280px);
+  }
+}
+
+/* Large screens but still constrained viewports */
+@media (min-width: 1025px) and (max-width: 1366px) {
+  .user-index-page {
+    margin: clamp(0.25rem, 0.5vw, var(--spacing-sm));
+  }
+  
+  .user-index-page .top-performers-container {
+    flex: 0 1 clamp(200px, 22vw, 280px);
   }
 }
