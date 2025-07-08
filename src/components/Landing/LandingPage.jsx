@@ -15,7 +15,7 @@ const LandingPage = () => {
     };
 
     return (
-        <div className="landing-container">
+        <div className="page-container landing-container">
             <div className="header">
                 <div className="logo-container">
                     <img
@@ -26,16 +26,16 @@ const LandingPage = () => {
                     <div className="logo-name">assetec</div>
                 </div>
                 <div className="nav-links">
-                    <div className="nav-button signup-button" onClick={handleSignUp}>
+                    <div className="btn btn--nav btn--signup nav-button signup-button" onClick={handleSignUp}>
                         Sign-up
                     </div>
-                    <div className="nav-button signin-button" onClick={handleSignIn}>
+                    <div className="btn btn--nav btn--signin nav-button signin-button" onClick={handleSignIn}>
                         Sign-in
                     </div>
                 </div>
             </div>
             <div className="main-content">
-                <div className="main-heading">
+                <div className="heading-main main-heading">
                     take your future into your own hands...
                 </div>
                 <div className="image-container">
@@ -44,7 +44,7 @@ const LandingPage = () => {
                         alt="Investment visualization"
                     />
                 </div>
-                <div className="sub-heading">
+                <div className="heading-sub sub-heading">
                     Sign-up to begin building your portfolio, track your investments and see the value of your assets.
                 </div>
             </div>

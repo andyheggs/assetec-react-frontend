@@ -1,0 +1,439 @@
+/* ================================
+   GLOBAL STYLES & CSS VARIABLES
+   ================================ */
+
+/* CSS Variables for consistent theming */
+:root {
+  --color-primary-dark: #1B263B;      /* Dark Blue background */
+  --color-primary-green: #4caf50;     /* Primary Green */
+  --color-neon-green: #00FFB3;        /* Neon Green */
+  --color-emerald-green: #2ecc71;     /* Emerald Green */
+  --color-white: #ffffff;
+  --color-error: #f44336;             /* Red for errors */
+  --color-warning: #ff9800;           /* Orange for warnings */
+  
+  /* Container backgrounds */
+  --bg-container-dark: #1e1e1e;
+  --bg-container-medium: #2c2c2c;
+  --bg-container-light: #333;
+  
+  /* Borders and shadows */
+  --border-radius-small: 5px;
+  --border-radius-medium: 10px;
+  --border-radius-large: 20px;
+  --box-shadow-default: 0 4px 8px rgba(0, 0, 0, 0.2);
+  --box-shadow-form: 0 0 15px rgba(0, 0, 0, 0.5);
+  
+  /* Spacing */
+  --spacing-xs: 5px;
+  --spacing-sm: 10px;
+  --spacing-md: 15px;
+  --spacing-lg: 20px;
+  --spacing-xl: 40px;
+  
+  /* Typography */
+  --font-family-primary: 'Arial', 'Helvetica', sans-serif;
+  --font-size-small: 0.9rem;
+  --font-size-medium: 1rem;
+  --font-size-large: 1.2rem;
+  --font-size-xl: 1.5rem;
+  
+  /* Layout constraints */
+  --max-width-content: 1200px;
+  --max-width-form: 400px;
+}
+
+/* ================================
+   GLOBAL RESET & BASE STYLES
+   ================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family-primary);
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: var(--color-primary-dark);
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* ================================
+   LAYOUT UTILITY CLASSES
+   ================================ */
+
+/* Main page container used across all pages */
+.page-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  color: var(--color-white);
+  padding: clamp(1rem, 3vw, 2.5rem);
+  background-color: var(--color-primary-dark);
+}
+
+/* Alternative page container for user dashboard pages */
+.page-container--full-height {
+  height: 100vh;
+  width: 100vw;
+  padding: var(--spacing-lg);
+}
+
+/* Main content area within pages */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  max-width: min(90vw, var(--max-width-content));
+  padding: clamp(1rem, 3vw, 2.5rem);
+}
+
+/* ================================
+   HEADER COMPONENTS
+   ================================ */
+
+/* Standard header used across pages */
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: min(90vw, var(--max-width-content));
+  padding: clamp(0.5rem, 1vw, 1rem);
+  align-items: center;
+}
+
+/* Alternative header for user dashboard */
+.header--fixed {
+  flex: 0 1 100px;
+  padding: var(--spacing-lg);
+  margin: var(--spacing-sm);
+}
+
+/* Logo container */
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: clamp(2rem, 6vw, 4rem);
+  width: auto;
+  margin-right: clamp(0.5rem, 2vw, 1.5rem);
+}
+
+.logo--small {
+  height: 60px;
+  margin-right: var(--spacing-sm);
+}
+
+.logo-name {
+  color: var(--color-emerald-green);
+  font-weight: bold;
+  font-size: clamp(1.25rem, 5vw, 3.75rem);
+}
+
+.logo-name--small {
+  font-size: 60px;
+}
+
+/* Navigation */
+.nav-links {
+  display: flex;
+  gap: clamp(0.5rem, 2vw, 1.5rem);
+}
+
+/* ================================
+   BUTTON COMPONENTS
+   ================================ */
+
+/* Base button styles */
+.btn {
+  border-radius: var(--border-radius-medium);
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  font-size: var(--font-size-medium);
+}
+
+/* Navigation buttons */
+.btn--nav {
+  padding: clamp(0.5rem, 1.5vw, 0.8rem) clamp(1rem, 3vw, 2rem);
+  font-size: clamp(0.9rem, 2.5vw, 1.25rem);
+  border-radius: clamp(0.5rem, 1.5vw, 0.8rem);
+}
+
+/* Standard size buttons */
+.btn--standard {
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--border-radius-small);
+}
+
+/* Large buttons */
+.btn--large {
+  padding: var(--spacing-sm) var(--spacing-lg);
+  font-size: var(--font-size-large);
+  width: 100%;
+  margin-top: var(--spacing-lg);
+}
+
+/* Small buttons */
+.btn--small {
+  padding: var(--spacing-xs) var(--spacing-sm);
+  font-size: var(--font-size-small);
+  margin-right: var(--spacing-xs);
+}
+
+/* Button color variants */
+.btn--primary {
+  background-color: var(--color-primary-green);
+  color: var(--color-white);
+}
+
+.btn--primary:hover {
+  background-color: #45a049;
+}
+
+.btn--signup {
+  background-color: var(--color-neon-green);
+  color: var(--color-primary-dark);
+  border: clamp(0.1rem, 0.3vw, 0.2rem) solid var(--color-primary-dark);
+}
+
+.btn--signin {
+  background-color: var(--color-primary-dark);
+  color: var(--color-neon-green);
+  border: clamp(0.1rem, 0.3vw, 0.2rem) solid var(--color-neon-green);
+}
+
+.btn--danger {
+  background-color: var(--color-error);
+  color: var(--color-white);
+}
+
+.btn--link {
+  background: none;
+  border: none;
+  color: var(--color-primary-green);
+  cursor: pointer;
+  font-size: var(--font-size-medium);
+  text-decoration: underline;
+  padding: 0;
+  margin: 0;
+}
+
+.btn--link:hover {
+  color: #45a049;
+}
+
+/* ================================
+   CONTAINER COMPONENTS
+   ================================ */
+
+/* Dark containers used throughout the app */
+.container {
+  background-color: var(--bg-container-dark);
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius-medium);
+  color: var(--color-white);
+}
+
+.container--bordered {
+  border: 1px solid var(--color-primary-green);
+}
+
+.container--shadow {
+  box-shadow: var(--box-shadow-default);
+}
+
+.container--centered {
+  width: 100%;
+  max-width: var(--max-width-form);
+  margin: 50px auto;
+  box-shadow: var(--box-shadow-form);
+}
+
+.container--medium {
+  background-color: var(--bg-container-medium);
+}
+
+.container--width-60 {
+  width: 60%;
+  margin: 0 auto;
+}
+
+/* ================================
+   TYPOGRAPHY
+   ================================ */
+
+.heading-main {
+  font-size: clamp(1.25rem, 4vw, 3rem);
+  font-weight: bold;
+  color: var(--color-white);
+  margin-top: clamp(1rem, 3vw, 2rem);
+  margin-bottom: clamp(2rem, 5vw, 3rem);
+  max-width: 100%;
+}
+
+.heading-main--standard {
+  font-size: 36px;
+  margin-top: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+}
+
+.heading-sub {
+  font-size: clamp(0.9rem, 2.5vw, 1.8rem);
+  font-weight: bold;
+  color: var(--color-white);
+  margin-top: clamp(1rem, 3vw, 2rem);
+  width: 100%;
+  max-width: min(80vw, 900px);
+  text-align: center;
+  line-height: 1.4;
+}
+
+.heading-section {
+  margin-bottom: var(--spacing-md);
+  color: var(--color-primary-green);
+}
+
+.text-error {
+  color: var(--color-error);
+  font-size: var(--font-size-small);
+  margin-top: var(--spacing-sm);
+  margin-bottom: var(--spacing-lg);
+  text-align: center;
+}
+
+/* ================================
+   FORM COMPONENTS
+   ================================ */
+
+.form-group {
+  width: 100%;
+  margin-bottom: var(--spacing-md);
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: var(--spacing-xs);
+  color: var(--color-white);
+}
+
+.form-input {
+  width: 100%;
+  max-width: 100%;
+  padding: var(--spacing-sm);
+  border-radius: var(--border-radius-small);
+  border: 1px solid var(--color-primary-green);
+  background-color: var(--bg-container-light);
+  color: var(--color-white);
+  font-size: var(--font-size-medium);
+  margin: var(--spacing-sm) 0;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--color-neon-green);
+}
+
+/* ================================
+   TABLE COMPONENTS
+   ================================ */
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: var(--spacing-lg);
+}
+
+.table th,
+.table td {
+  padding: var(--spacing-sm);
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+  color: var(--color-white);
+}
+
+.table th {
+  background-color: var(--bg-container-light);
+}
+
+.table tr:hover {
+  background-color: #444;
+}
+
+/* ================================
+   IMAGE COMPONENTS
+   ================================ */
+
+.image-container {
+  width: 100%;
+  max-width: min(70vw, 800px);
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.profile-image {
+  height: 70px;
+  width: auto;
+  padding: 0;
+}
+
+/* ================================
+   RESPONSIVE UTILITIES
+   ================================ */
+
+/* Mobile-first responsive design */
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(1rem, 3vw, 1.5rem);
+  }
+  
+  .nav-links {
+    width: 100%;
+    justify-content: center;
+    margin-top: clamp(0.5rem, 2vw, 1rem);
+  }
+  
+  .container--width-60 {
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-container--full-height {
+    padding: var(--spacing-sm);
+  }
+  
+  .container {
+    padding: var(--spacing-md);
+    margin: var(--spacing-xs);
+  }
+  
+  .table th,
+  .table td {
+    padding: var(--spacing-sm);
+  }
+}
